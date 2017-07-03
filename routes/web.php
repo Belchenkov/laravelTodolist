@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'PagesController@getHome');
+Route::get('/', 'TodosController@index');
+
+Route::resource('todo', 'TodosController');
