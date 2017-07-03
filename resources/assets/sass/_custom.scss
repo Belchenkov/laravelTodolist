@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.jumbotron {
+    background-color: #eee;
+}
+
+.content {
+     flex: 1;
+}
+
+#footer {
+    color: #fff;
+    background: #333;
+    margin-top: 30px;
+
+    p {
+        padding: 20px 0 0 10px;
+    }
+}
