@@ -2,19 +2,19 @@
 
 @section('content')
 
-    <h1 class="text-center">Todos</h1>
+    @if(count($todo) > 0)
 
-    @if(count($todos) > 0)
+    <a href="/" class="btn btn-outline-secondary">Go Back</a>
+
+    <h1 class="text-center">{{ $todo->text }}</h1>
+
 
         <div class="card">
-            @foreach($todos as $todo)
-                <h3 class="card-header">
-                   <a href="todo/{{ $todo->id }}">{{ $todo->text }}</a> 
-                </h3>
                 <div class="card-block">
                     <p class="card-title"><span class="badge badge-info">{{ $todo->due }}</span></p>
+                    <hr>
+                    <p class="card-text">{{ $todo->body }}</p>
                 </div>
-            @endforeach
         </div>
     @endif
 

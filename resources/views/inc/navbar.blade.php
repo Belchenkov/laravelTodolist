@@ -6,9 +6,13 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::is('/todo/create') ? 'active' : '' }}" href="/">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/todo/create">Create Todo</a>
+          </li>
+          
         </ul>
       </div>
     </nav>
