@@ -14,7 +14,11 @@
                     <p class="card-title"><span class="badge badge-info">{{ $todo->due }}</span></p>
                     <hr>
                     <p class="card-text">{{ $todo->body }}</p>
-                    <a href="/todo/{{$todo->id}}/edit" class="btn btn-warning">Edit</a>
+                    <a href="/todo/{{$todo->id}}/edit" id="btn-edit" class="btn btn-warning">Edit</a>
+                    {!! Form::open(['action' => ['TodosController@destroy', $todo->id], 'method' => 'post', 'id' => 'btn-delete']) !!}
+                        {{ Form::hidden('_method', 'DELETE') }}
+                        {{ Form::bsSubmit('Delete', ['class' => 'btn btn-danger']) }}
+                    {!! Form::close() !!}
                 </div>
         </div>
     @endif
