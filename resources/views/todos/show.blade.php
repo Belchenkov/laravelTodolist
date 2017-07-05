@@ -14,6 +14,7 @@
                     <p class="card-title"><span class="badge badge-info">{{ $todo->due }}</span></p>
                     <hr>
                     <p class="card-text">{{ $todo->body }}</p>
+                    <a href="/todo/{{$todo->id}}/edit" class="btn btn-warning">Edit</a>
                 </div>
         </div>
     @endif
